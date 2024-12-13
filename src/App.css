@@ -30,13 +30,14 @@
   justify-content: center;
   height: 100vh;
   width: 100vw;
- top: 100px;
+  top: 100px;
   backdrop-filter: blur(4px);
   background-color: rgba(0,0,0,0.5);
   gap: 20px;
 }
 
 .landing_content {
+  padding-left: 6%;
  margin-top: 430px;
   margin-left: 100px;
   transform: translate(-50%, -50%);
