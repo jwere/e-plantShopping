@@ -6,6 +6,7 @@ import './CartItem.css';
 const CartItem = ({ onContinueShopping, setAddedToCart}) => {
   const cart = useSelector(state => state.cart.items);
   const productCounter = useSelector(state => state.cart.productCounter);
+  const treeCounter = useSelector(state => state.cart.treeCounter);
   const dispatch = useDispatch();
   // Calculate total amount for all products in the cart
   const calculateTotalAmount = () => {
@@ -55,7 +56,8 @@ const CartItem = ({ onContinueShopping, setAddedToCart}) => {
 
   return (
     <div className="cart-container">
-      <h2 style={{ color: 'black' }}>Total Number in Cart: {productCounter}</h2>
+      <h2 style={{ color: 'black' }}>Number of Plant-Types Selected: {treeCounter}</h2>
+      <h2 style={{ color: 'black' }}>Total Number of Plants In Cart: {productCounter}</h2>
       <h2 style={{ color: 'black' }}>Total Cart Amount: ${calculateTotalAmount()}</h2>
       <div>
         {cart.map(item => (
