@@ -15,7 +15,7 @@ export const CartSlice = createSlice({
         existingItem.quantity++;
       } else {
         state.items.push({ name, image, cost, quantity: 1, });
-        treeCounter++;
+        state.treeCounter++;
       }
       state.productCounter++;
     },
@@ -38,7 +38,7 @@ export const CartSlice = createSlice({
       });
       state.productCounter = tempCount;
       if (treeCounter > 0)
-        treeCounter--;
+        state.treeCounter--;
     },
     updateQuantity: (state, action) => {
       const { name, quantity } = action.payload;
