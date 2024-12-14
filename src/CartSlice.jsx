@@ -37,7 +37,7 @@ export const CartSlice = createSlice({
         tempCount += item.quantity;
       });
       state.productCounter = tempCount;
-      if (treeCounter > 0)
+      if (state.treeCounter > 0)
         state.treeCounter--;
     },
     updateQuantity: (state, action) => {
