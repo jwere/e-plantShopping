@@ -23,11 +23,13 @@ const CartItem = ({ onContinueShopping, setAddedToCart}) => {
   };
 
   const handleIncrement = (item) => {
-    dispatch(addItem(item));
+    // dispatch(addItem(item));
+    dispatch(updateQuantity({ name: item.name, quantity: item.quantity + 1 }));
   };
 
   const handleDecrement = (item) => {
-    dispatch(decrementQuantity(item));
+    // dispatch(decrementQuantity(item));
+    dispatch(updateQuantity({ name: item.name, quantity: item.quantity - 1 }));
   };
 
   const handleRemove = (item) => {
